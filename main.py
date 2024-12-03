@@ -1,7 +1,7 @@
 import time
 from helpers import *
 from user_management import register_and_login
-from access_control import get_authorized_operations
+from access_control import get_authorized_operations, check_access_currently
 
 
 def main():
@@ -11,7 +11,16 @@ def main():
             print("justInvest System\n" + "-" * 35)
             user = register_and_login()
             clear_page()
-            print("ACCESS GRANTED!")
+
+            has_access = check_access_currently(user.get_roles())
+            if has_access:
+                print("ACCESS GRANTED!")
+            else:
+                print("ACCESS DENIED!")
+                time.sleep(3)
+                print("Logging out...")
+                time.sleep(3)
+                continue
 
             while True:
                 authorized_operations = get_authorized_operations(user.get_roles())

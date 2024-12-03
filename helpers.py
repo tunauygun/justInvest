@@ -1,3 +1,5 @@
+import random
+
 from operation import Operation
 
 
@@ -43,15 +45,20 @@ def get_valid_input_from_list(valid_inputs: list[int], prompt: str = " > "):
 def clear_page():
     print("\n" * 40)
 
-# def get_int_input(prompt=" > ", min: int = None, max: int = None):
-#     while True:
-#         try:
-#             user_input = int(input(prompt))
-#             if (min is not None and user_input < min) or (max is not None and user_input > max):
-#                 print(" Please enter a valid input. (Between {} and {})".format(min, max))
-#                 continue
-#             break
-#         except ValueError:
-#             print(" Please enter a valid input.")
-#
-#     return user_input
+
+def get_random_time():
+    h = random.randint(0, 23)
+    m = random.randint(0, 59)
+    return h, m
+
+
+def print_time(hour, minute):
+    am_pm = "am" if hour < 12 else "pm"
+    hour %= 12
+    print(f'Current time is {hour:02}:{minute:02} {am_pm}')
+
+
+def within_business_hours(hour, minute):
+    if (hour >= 9 and hour < 17) or (hour == 17 and minute == 0):
+        return True
+    return False
