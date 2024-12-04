@@ -155,7 +155,7 @@ def _is_valid_password(username, password):
 
 
 def _is_weak_password(password):
-    with open('weak_passwords.txt', mode='r') as weak_password_file:
+    with open('weak_passwords.txt', mode='r', encoding='utf-8') as weak_password_file:
         for weak_password in weak_password_file:
             if weak_password.strip() == password:
                 return True

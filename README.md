@@ -12,6 +12,6 @@ python3 main.py
 
 ---
 
-Source for weak passwords:
+Source for weak passwords file:
 
-https://github.com/danielmiessler/SecLists/blob/master/Passwords/Common-Credentials/10k-most-common.txt
+https://www.ncsc.gov.uk/static-assets/documents/PwnedPasswordsTop100k.txt
