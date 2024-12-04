@@ -1,5 +1,10 @@
-Xx,Client-All_Day_Access,x1VoJgorUbml/EVq4pUW8Gip2WpQaRtpLt23ez4N254=,cg0hVsLkp4pzgQGB4E/0fw==
-Cc,Teller-Employee,39d9NP743CFgX/TknpoZZqoMuuoCcckYb/GxFfEquEg=,nabjknovGxfNkxZPoX55EA==
-Y,Client-All_Day_Access,jXr7DYMbN1U63bFMBwlkxZQohvW+k6m/dwpTs3au1Q0=,kMlZ/08P0ctWsairX7zODA==
-T,Teller-Employee,9VvJGeQlKWsZyNIeYq8je2grnbbljUE2sUvPsX8+iIk=,5CEPXZ1Q0EJYtuy69egnFg==
-Test,Client-All_Day_Access,W4Buq2rS75pU9ZEjRhCWaYx3Rp8UEU1yrr71eVsSlAQ=,mI1xkEU4yaOuZLz193UfzA==
+SashaKim,Client-All_Day_Access,QyQNDnaKyET5IBZaGTFDMKc3LPZ/TcsO+hjis57LZrw=,7d8mXXjgpEwZOZzZnmZjUQ==
+EmeryBlake,Client-All_Day_Access,piz/+nG0NGmfwhhktjtMLSsTleTIqJSWEyuXYa/GZRc=,q0bnRxUPcLbJXTWdkWyHYg==
+NoorAbbasi,Premium_Client-All_Day_Access,iqqo8ugD0OdYkMx7eyeQym44H6wHXAm5hs2OkmKgHjA=,Dht1rQyrP15BvHoaDorltg==
+ZuriAdebayo,Premium_Client-All_Day_Access,frE52N9ZyK88Fu/ndeU45GH3pcRNafaTj7NdjDTqqAM=,vIB6LGUXnBudPhCSFLU50Q==
+MikaelChen,Financial_Advisor-Employee-All_Day_Access,jtq7l+gQnmBkQHXTgDgDoD5+TFcco+fmq4f08xaJzpA=,+0PvEGDKkr3ueCuGbsauxg==
+JordanRiley,Financial_Advisor-Employee-All_Day_Access,yCrqsCNi5swFpJIZMXq2Fi2OpTSnWfPNBYZNkICMghI=,jUtID53gC3HV3wwdEkFpEA==
+EllisNakamura,Financial_Planner-Employee-All_Day_Access,9Pw7Fd1S8C2YOLMqzn3kN59JbPAz3Cjk1h7dTzJrqkY=,3ZkhAeqAHsnGoNo2DpLLcA==
+HarperDiaz,Financial_Planner-Employee-All_Day_Access,EzzZaOK4OyhRw6eHsMlp1OdLceq1kfx6OwtD6rO5spY=,SRp70rzTuStkhjgyeD0oIA==
+AlexHayes,Teller-Employee,AJLYQevcDjPmrYGz+eU1BxxBc5v4/I1WyOUP08K034o=,WfiA+di9BVvPxs+WCimTng==
+AdairPatel,Teller-Employee,cKxUGvhwyfW3zb0eYCSNEirEzzCvseCeK/VheHvQxMU=,CpZImGbVOzn3yQSOL22EEg==

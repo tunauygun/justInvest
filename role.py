@@ -3,14 +3,15 @@ from operation import Operation as Op
 
 
 class Role(Enum):
-    CLIENT = (
-        "Client", [Op.ViewAccountBalance, Op.ViewInvestmentPortfolio, Op.ViewFinancialAdvisorContactInfo, Op.Logout])
-    PREMIUM_CLIENT = ("Premium_Client", [Op.ModifyInvestmentPortfolio, Op.ViewFinancialPlannerContactInfo, Op.Logout])
+    CLIENT = ("Client",
+              [Op.ViewAccountBalance, Op.ViewInvestmentPortfolio, Op.ViewFinancialAdvisorContactInfo, Op.Logout])
+    PREMIUM_CLIENT = ("Premium_Client",
+                      [Op.ViewAccountBalance, Op.ViewInvestmentPortfolio, Op.ViewFinancialAdvisorContactInfo,
+                       Op.ModifyInvestmentPortfolio, Op.ViewFinancialPlannerContactInfo, Op.Logout])
     EMPLOYEE = ("Employee", [Op.ViewAccountBalance, Op.ViewInvestmentPortfolio, Op.Logout])
     FINANCIAL_ADVISOR = ("Financial_Advisor", [Op.ModifyInvestmentPortfolio, Op.ViewPrivateConsumerInstruments])
-    FINANCIAL_PLANNER = ("Financial_Planner",
-                         [Op.ModifyInvestmentPortfolio, Op.ViewMoneyMarketInstruments,
-                          Op.ViewPrivateConsumerInstruments])
+    FINANCIAL_PLANNER = ("Financial_Planner", [Op.ModifyInvestmentPortfolio, Op.ViewMoneyMarketInstruments,
+                                               Op.ViewPrivateConsumerInstruments])
     TELLER = ("Teller", [])
     ALL_DAY_ACCESS = ("All_Day_Access", [])
 
