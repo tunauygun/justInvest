@@ -157,7 +157,7 @@ def _is_valid_password(username, password):
 def _is_weak_password(password):
     with open('weak_passwords.txt', mode='r') as weak_password_file:
         for weak_password in weak_password_file:
-            if weak_password == password:
+            if weak_password.strip() == password:
                 return True
         return False
 
@@ -174,7 +174,7 @@ def _get_username_password():
             if user_already_exists:
                 print("Username already exists! Select a different username.")
     while True:
-        password = input("Password: ")
+        password = input("Password: ").strip()
         is_valid_password, error_message = _is_valid_password(username, password)
         if not is_valid_password:
             print(error_message)
