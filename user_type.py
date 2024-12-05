@@ -4,7 +4,7 @@ from role import Role
 
 class UserType(Enum):
     CLIENT = (1, "Client", [Role.CLIENT, Role.ALL_DAY_ACCESS])
-    PREMIUM_CLIENT = (2, "Premium Client", [Role.PREMIUM_CLIENT, Role.ALL_DAY_ACCESS])
+    PREMIUM_CLIENT = (2, "Premium Client", [Role.PREMIUM_CLIENT, Role.CLIENT, Role.ALL_DAY_ACCESS])
     FINANCIAL_ADVISOR = (3, "Financial Advisor", [Role.FINANCIAL_ADVISOR, Role.EMPLOYEE, Role.ALL_DAY_ACCESS])
     FINANCIAL_PLANNER = (4, "Financial Planner", [Role.FINANCIAL_PLANNER, Role.EMPLOYEE, Role.ALL_DAY_ACCESS])
     TELLER = (5, "Teller", [Role.TELLER, Role.EMPLOYEE])

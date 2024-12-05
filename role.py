@@ -6,8 +6,7 @@ class Role(Enum):
     CLIENT = ("Client",
               [Op.ViewAccountBalance, Op.ViewInvestmentPortfolio, Op.ViewFinancialAdvisorContactInfo, Op.Logout])
     PREMIUM_CLIENT = ("Premium_Client",
-                      [Op.ViewAccountBalance, Op.ViewInvestmentPortfolio, Op.ViewFinancialAdvisorContactInfo,
-                       Op.ModifyInvestmentPortfolio, Op.ViewFinancialPlannerContactInfo, Op.Logout])
+                      [Op.ModifyInvestmentPortfolio, Op.ViewFinancialPlannerContactInfo, Op.Logout])
     EMPLOYEE = ("Employee", [Op.ViewAccountBalance, Op.ViewInvestmentPortfolio, Op.Logout])
     FINANCIAL_ADVISOR = ("Financial_Advisor", [Op.ModifyInvestmentPortfolio, Op.ViewPrivateConsumerInstruments])
     FINANCIAL_PLANNER = ("Financial_Planner", [Op.ModifyInvestmentPortfolio, Op.ViewMoneyMarketInstruments,
