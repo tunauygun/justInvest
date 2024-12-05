@@ -12,8 +12,8 @@ def get_authorized_operations(user_roles):
     return operation_list
 
 
-def check_access_currently(user_roles):
-    hour, minute = get_random_time()
+def check_access_currently(user_roles, time):
+    hour, minute = time
     print_time(hour, minute)
     print()
     return _has_access_currently(user_roles, [hour, minute])

@@ -12,7 +12,7 @@ def main():
             user = register_and_login()
             clear_page()
 
-            has_access = check_access_currently(user.get_roles())
+            has_access = check_access_currently(user.get_roles(), get_random_time())
             if has_access:
                 print("ACCESS GRANTED!")
             else:
