@@ -46,11 +46,11 @@ def _login_user():
         password = input("Password: ")
         username, roles, hash, salt = _get_user_from_password_file(username_input)
         if username is None:
-            print("Invalid username!")
+            print("Incorrect username or password!")
         else:
             is_password_correct = _is_password_correct(password, hash, salt)
             if not is_password_correct:
-                print("Invalid password!")
+                print("Incorrect username or password!")
             else:
                 return User(username, [Role.get_enum_from_name(role_name) for role_name in roles])
 
