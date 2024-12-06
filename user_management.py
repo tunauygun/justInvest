@@ -78,7 +78,7 @@ def _is_password_correct(password, hash, salt):
 
 
 def _get_user_from_password_file(target_username):
-    with open('pw.txt', mode='r') as password_file:
+    with open('passwd.txt', mode='r') as password_file:
         file_reader = csv.reader(password_file, delimiter=',')
         for user in file_reader:
             if len(user) == 0:
@@ -94,7 +94,7 @@ def _get_user_from_password_file(target_username):
 
 def _add_user_to_password_file(username, roles, password):
     hash, salt = _hash_with_salt(password)
-    with open('pw.txt', mode='a', newline="") as password_file:
+    with open('passwd.txt', mode='a', newline="") as password_file:
         if _check_for_existing_user(username):
             return False
         file_writer = csv.writer(password_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
@@ -116,7 +116,7 @@ def _hash_with_salt(password):
 
 
 def _check_for_existing_user(target_username):
-    with open('pw.txt', mode='r') as password_file:
+    with open('passwd.txt', mode='r') as password_file:
         file_reader = csv.reader(password_file, delimiter=',')
         for user in file_reader:
             if len(user) == 0:
