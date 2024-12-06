@@ -66,7 +66,7 @@ def _is_password_correct(password, hash, salt):
     kdf = Scrypt(
         salt=salt,
         length=32,
-        n=2 ** 14,
+        n=2 ** 17,
         r=8,
         p=1,
     )
@@ -107,7 +107,7 @@ def _hash_with_salt(password):
     kdf = Scrypt(
         salt=salt,
         length=32,
-        n=2 ** 14,
+        n=2 ** 17,
         r=8,
         p=1,
     )
