@@ -1,7 +1,7 @@
 from enum import Enum
 from operation import Operation as Op
 
-
+# All roles within the system
 class Role(Enum):
     CLIENT = ("Client",
               [Op.ViewAccountBalance, Op.ViewInvestmentPortfolio, Op.ViewFinancialAdvisorContactInfo, Op.Logout])

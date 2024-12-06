@@ -1,6 +1,6 @@
 from enum import Enum
 
-
+# All operations in the system
 class Operation(Enum):
     ViewAccountBalance = (1, "View account balance")
     ViewInvestmentPortfolio = (2, "View investment portfolio")

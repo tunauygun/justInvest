@@ -1,7 +1,7 @@
 from enum import Enum
 from role import Role
 
-
+# All user types within the system
 class UserType(Enum):
     CLIENT = (1, "Client", [Role.CLIENT, Role.ALL_DAY_ACCESS])
     PREMIUM_CLIENT = (2, "Premium Client", [Role.PREMIUM_CLIENT, Role.CLIENT, Role.ALL_DAY_ACCESS])

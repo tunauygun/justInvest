@@ -10,9 +10,7 @@ from user_type import UserType
 from user import User
 
 
-# Password File Format:
-# username,roles,hash,salt
-
+# Displays a menu with register, login and exit options.
 def register_and_login():
     selected_option = get_input_from_options(["Login", "Register", "Exit"])
     if selected_option == 3:
@@ -24,6 +22,7 @@ def register_and_login():
         return _login_menu()
 
 
+# Runs the registration function
 def _registration_menu():
     _register_new_user()
     input("Registration Successful. Press enter to go to login page...")
@@ -31,10 +30,12 @@ def _registration_menu():
     return _login_menu()
 
 
+# Runs the login function
 def _login_menu():
     return _login_user()
 
 
+# Keeps asking the user for a correct username and password in order to log in
 def _login_user():
     while True:
         print()
@@ -55,6 +56,7 @@ def _login_user():
                 return User(username, [Role.get_enum_from_name(role_name) for role_name in roles])
 
 
+# Gets a username and password from the user and adds a new record to the password file
 def _register_new_user():
     username, password = _get_username_password()
     user_type = _get_user_type()
@@ -62,6 +64,7 @@ def _register_new_user():
     _add_user_to_password_file(username, roles, password)
 
 
+# Checks if the password is correct by comparing the hash to the new password using the salt
 def _is_password_correct(password, hash, salt):
     kdf = Scrypt(
         salt=salt,
@@ -77,6 +80,7 @@ def _is_password_correct(password, hash, salt):
         return False
 
 
+# Reads a user's record from the password file
 def _get_user_from_password_file(target_username):
     with open('passwd.txt', mode='r') as password_file:
         file_reader = csv.reader(password_file, delimiter=',')
@@ -92,6 +96,7 @@ def _get_user_from_password_file(target_username):
         return None, None, None, None
 
 
+# Adds a new record to the password file for the given username, and password with the given list of roles
 def _add_user_to_password_file(username, roles, password):
     hash, salt = _hash_with_salt(password)
     with open('passwd.txt', mode='a', newline="") as password_file:
@@ -102,6 +107,7 @@ def _add_user_to_password_file(username, roles, password):
         return True
 
 
+# Returns the hash and the salt used to generate the hash for a given password
 def _hash_with_salt(password):
     salt = os.urandom(16)
     kdf = Scrypt(
@@ -115,6 +121,7 @@ def _hash_with_salt(password):
     return hash, salt
 
 
+# Checks if a user exists in the system by going over the password file
 def _check_for_existing_user(target_username):
     with open('passwd.txt', mode='r') as password_file:
         file_reader = csv.reader(password_file, delimiter=',')
@@ -127,6 +134,7 @@ def _check_for_existing_user(target_username):
         return False
 
 
+# Checks if the provided password is acceptable based on the systems password policy
 def _is_valid_password(username, password):
     if username == password:
         return False, "Your password cannot be same as your username!"
@@ -154,6 +162,7 @@ def _is_valid_password(username, password):
     return True, None
 
 
+# Checks if the provided password is a weak password by going through the top 100k commonly used passwords
 def _is_weak_password(password):
     with open('weak_passwords.txt', mode='r', encoding='utf-8') as weak_password_file:
         for weak_password in weak_password_file:
@@ -162,6 +171,7 @@ def _is_weak_password(password):
         return False
 
 
+# Gets a username and password from the user
 def _get_username_password():
     user_already_exists = True
     while user_already_exists:
@@ -182,5 +192,6 @@ def _get_username_password():
             return username, password
 
 
+# Gets the user type of the new user that is registering to the system
 def _get_user_type():
     return get_enum_selection(UserType, "Select a user type: ")
